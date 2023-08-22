@@ -1,0 +1,68 @@
+.NavbarContainer {
+    position: relative;
+}
+
+.categoryNavbar {
+    overflow-x: hidden;
+}
+
+.navLinks {
+    display: flex;
+}
+
+.categoryLink {
+    color: #777;
+    font-weight: bold;
+    padding: 15px 15px;
+    white-space: nowrap;
+}
+
+.leftButtonContainer, .rightButtonContainer{
+    cursor: pointer;
+}
+
+.arrowIconLeft,
+.arrowIconRight {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.arrowIconLeft {
+    left: 0;
+}
+
+.arrowIconRight {
+    right: 0;
+}
+
+.arrowIconLeft:hover,
+.arrowIconRight:hover {
+    background-color: #f0f0f0;
+}
+
+/* Modify the scrollbar track */
+.NavbarContainer::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+/* Modify the scrollbar thumb */
+.NavbarContainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+/* Hide the scrollbar when not scrolling */
+.NavbarContainer::-webkit-scrollbar {
+    height: 0;
+}
+
+.NavbarContainer:hover::-webkit-scrollbar {
+    height: 5px;
+}

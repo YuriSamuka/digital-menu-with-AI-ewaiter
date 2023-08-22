@@ -1,0 +1,22 @@
+.productMainContainer {
+    min-width: 340px;
+    padding: 25px 15px 15px 25px;
+    cursor: pointer;
+}
+
+.productImage {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 0;
+}
+
+.productImageDiv{
+    float: right;
+}
+.productInfosDiv{
+    max-width: 70%;
+}
+
+.productInfosDiv, .productImageDiv{
+    display: inline-block;
+}
