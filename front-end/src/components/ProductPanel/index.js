@@ -28,7 +28,6 @@ export class index extends Component {
 
     const description = `${this.description}. ${this.ingredients}`
     const showModal = this.state.showmodal
-    
     return (
       <>
         <Col

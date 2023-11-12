@@ -13,7 +13,6 @@ const INIT_STATE = {
 }
 
 const products = (state = INIT_STATE, action) => {
-    console.log(action);    
     switch (action.type) {
         case FETCH_PRODUCTS:
             return { ...state, loading: true }

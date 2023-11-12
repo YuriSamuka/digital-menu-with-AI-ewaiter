@@ -10,11 +10,11 @@ import {
     fetchCategoryFailed
 } from './actions'
 
-function* fetchCategorySaga() {
+function* fetchCategorySaga({ payload: restaurantId }) {
     try {
         const options = { method: 'GET' }
-        const endpoint = `/category`
-        const { category } = yield call(fetchJSON, endpoint, options)
+        const endpoint = `category/${restaurantId}`
+        const category = yield call(fetchJSON, endpoint, options)
         yield put(fetchCategorySuccess(category))
     } catch (error) {
         yield put(fetchCategoryFailed(error))

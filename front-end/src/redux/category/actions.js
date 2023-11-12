@@ -4,9 +4,9 @@ import {
     FETCH_CATEGORY_SUCCESS,
 } from "./constants"
 
-export const fetchCategory = () => ({
+export const fetchCategory = (restaurantId) => ({
     type: FETCH_CATEGORY,
-    payload: {},
+    payload: restaurantId,
 })
 
 export const fetchCategorySuccess = (category) => ({

@@ -14,7 +14,7 @@ export class CategoryNavbar extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchCategory();
+        this.props.fetchCategory(1);
     }
 
     handleScrollLeft() {
@@ -26,6 +26,9 @@ export class CategoryNavbar extends Component {
     };
 
     render() {
+
+        const categories = this.props.categories || []
+
         return (
             <Navbar bg="light" expand="lg" className="mb-3">
                 <div className={styles.leftButtonContainer}>
@@ -36,16 +39,15 @@ export class CategoryNavbar extends Component {
                     />
                 </div>
                 <Container ref={this.navbarContainer} fluid className={styles.NavbarContainer} style={{ overflowX: "auto", transition: "transform 0.3s ease" }}>
-                    {/* <Navbar.Toggle aria-controls="category-navbar" /> */}
                     <Navbar id="category-navbar">
                         <Nav className={styles.categoryNavbar}>
-                            {this.props.categories.map((category, index) => (
+                            {categories.map((category) => (
                                 <Nav.Link
-                                    key={index}
+                                    key={category.categoryId}
                                     href="#"
                                     className={styles.categoryLink}
                                 >
-                                    {category}
+                                    {category.name}
                                 </Nav.Link>
                             ))}
                         </Nav>

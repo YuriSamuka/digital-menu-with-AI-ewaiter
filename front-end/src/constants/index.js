@@ -1,2 +1,2 @@
-export const USE_FAKE_DB = false
+export const USE_FAKE_BACKEND = false
 export * from './api'

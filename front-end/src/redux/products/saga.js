@@ -14,9 +14,7 @@ function* fetchProductsSaga({ payload: restaurantId }) {
     try {
         const options = { method: 'GET' }
         const endpoint = `product/restaurant/${restaurantId}`
-        const { products } = yield call(fetchJSON, endpoint, options)
-        console.log("products!!!!!!!!!!!!!!!!!!!!!!!!@@@@@@@@@");
-        console.log(products);
+        const products = yield call(fetchJSON, endpoint, options)
         yield put(fetchProductsSuccess(products))
     } catch (error) {
         yield put(fetchProductsFailed(error))

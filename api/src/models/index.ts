@@ -1,6 +1,4 @@
 export * from './base'
-export * from './battle.model'
-export * from './monster.model'
 export * from './chat.model'
 export * from './chatMessage.model'
 export * from './restaurant.model'
